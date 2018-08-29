@@ -2,6 +2,8 @@ const secondsHand = document.querySelector('.sec-hand');
 const minsHand = document.querySelector('.min-hand');
 const hoursHand = document.querySelector('.hour-hand');
 const allHands = document.querySelectorAll('.hand');
+const inputs = document.querySelectorAll('.options input');
+const hexCode  = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i
 
 const setDate = () => {
   const now = new Date();
@@ -25,3 +27,15 @@ const setDate = () => {
   }
 }
 setInterval(setDate,1000);
+
+function handleColours() {
+  document.documentElement.style.setProperty('--colour', this.value);
+  let colour = getComputedStyle(document.body).getPropertyValue('--colour');
+  if (hexCode.test(colour)) {
+    document.getElementsByClassName('error')[0].style.display='none';
+  } else {
+    document.documentElement.style.setProperty('--colour', '#444');
+    document.getElementsByClassName('error')[0].style.display='block';
+  }
+}
+inputs.forEach(input => input.addEventListener('change', handleColours));

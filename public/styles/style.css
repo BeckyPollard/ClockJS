@@ -140,6 +140,13 @@ ul {
   list-style: none;
   padding: 0; }
 
+:root {
+  --colour: #ff0000; }
+
+.error {
+  display: none;
+  color: red; }
+
 body {
   background: #000;
   display: -webkit-box;
@@ -148,14 +155,46 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-family: monospace; }
+
+::-moz-selection {
+  background: var(--colour);
+  color: #000; }
+
+::selection {
+  background: var(--colour);
+  color: #000; }
+
+.options {
+  margin: 0 auto;
+  color: var(--colour);
+  width: 300px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px; }
+  .options input {
+    color: var(--colour);
+    background: #000;
+    border: 0px;
+    border-bottom: solid 2px var(--colour);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-style: italic;
+    margin-left: 10px;
+    width: 200px;
+    margin-top: 5px;
+    padding: 0 10px; }
+    .options input:focus {
+      outline: 0px;
+      outline: solid 2px var(--colour); }
 
 .clock {
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 500px 1px rgba(255, 0, 0, 0.747);
-          box-shadow: 0px 0px 500px 1px rgba(255, 0, 0, 0.747);
+  -webkit-box-shadow: 0px 0px 500px 1px var(--colour);
+          box-shadow: 0px 0px 500px 1px var(--colour);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -168,12 +207,12 @@ body {
     -webkit-transform: translateY(-3px);
             transform: translateY(-3px); }
     .clock .clock-face .mark {
-      background: red;
+      background: var(--colour);
       width: 1px;
       height: 5%;
       position: absolute;
-      -webkit-box-shadow: 0px 0px 15px 1px red;
-              box-shadow: 0px 0px 15px 1px red; }
+      -webkit-box-shadow: 0px 0px 15px 1px var(--colour);
+              box-shadow: 0px 0px 15px 1px var(--colour); }
       .clock .clock-face .mark:first-of-type {
         left: 50%;
         top: 3%; }
@@ -199,24 +238,24 @@ body {
     .clock .clock-face .hand {
       width: 50%;
       height: 1px;
-      background: red;
+      background: var(--colour);
       position: absolute;
       top: 50%;
       -webkit-transform-origin: 100%;
               transform-origin: 100%; }
     .clock .clock-face .sec-hand {
-      background: red;
+      background: var(--colour);
       width: 48%;
       left: 2%;
-      -webkit-box-shadow: 0px 0px 15px 1px red;
-              box-shadow: 0px 0px 15px 1px red; }
+      -webkit-box-shadow: 0px 0px 15px 1px var(--colour);
+              box-shadow: 0px 0px 15px 1px var(--colour); }
     .clock .clock-face .min-hand {
       width: 41%;
       left: 9%;
-      -webkit-box-shadow: 0px 0px 20px 1px red;
-              box-shadow: 0px 0px 20px 1px red; }
+      -webkit-box-shadow: 0px 0px 20px 1px var(--colour);
+              box-shadow: 0px 0px 20px 1px var(--colour); }
     .clock .clock-face .hour-hand {
       width: 22%;
       left: 28%;
-      -webkit-box-shadow: 0px 0px 20px 1px red;
-              box-shadow: 0px 0px 20px 1px red; }
+      -webkit-box-shadow: 0px 0px 20px 1px var(--colour);
+              box-shadow: 0px 0px 20px 1px var(--colour); }
