@@ -169,25 +169,19 @@ body {
 .options {
   margin: 0 auto;
   color: var(--colour);
-  width: 300px;
   position: absolute;
-  left: 50px;
-  bottom: 50px; }
+  left: 0px;
+  bottom: 20px; }
   .options input {
-    color: var(--colour);
     background: #000;
     border: 0px;
-    border-bottom: solid 2px var(--colour);
-    text-transform: uppercase;
-    font-size: 30px;
-    font-style: italic;
     margin-left: 10px;
-    width: 200px;
+    width: 65px;
+    height: 50px;
     margin-top: 5px;
     padding: 0 10px; }
     .options input:focus {
-      outline: 0px;
-      outline: solid 2px var(--colour); }
+      outline: 0px; }
 
 .clock {
   width: 30rem;
