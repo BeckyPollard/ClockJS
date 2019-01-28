@@ -1,6 +1,6 @@
 # ClockJS
 <p>Creative coding with JavaScript to create a clock that updates on local time.</p>
-<p>Based off of lesson #2 of <a href="https://javascript30.com/">JavaScript30</a>, Wes Bos's 30 Day Vanilla JS Coding Challenge.</p>
+<p>Based off of lesson #2 and #3 of <a href="https://javascript30.com/">JavaScript30</a>, Wes Bos's 30 Day Vanilla JS Coding Challenge.</p>
 
 ### Features:
 - CSS variables for colour-picker
